@@ -4,6 +4,7 @@ import type { PanelSize } from 'react-resizable-panels';
 import './App.css';
 import { TopBar } from './components/TopBar';
 import { MindMapCanvas } from './features/canvas/MindMapCanvas';
+import { ChatSidebar } from './features/chat/ChatSidebar';
 import { useAppStore } from './stores/app-store';
 
 function ChevronIcon({ flipped }: { flipped: boolean }) {
@@ -78,9 +79,7 @@ function App() {
             className="flex flex-col overflow-hidden"
           >
             <div className="flex h-full flex-col overflow-hidden border-r border-gray-200 bg-gray-50">
-              <div className="flex flex-1 items-center justify-center p-4">
-                <p className="text-sm text-gray-400">Chat will go here</p>
-              </div>
+              <ChatSidebar />
             </div>
           </Panel>
 
