@@ -3,6 +3,7 @@ import { Group, Panel, Separator, usePanelRef } from 'react-resizable-panels';
 import type { PanelSize } from 'react-resizable-panels';
 import './App.css';
 import { TopBar } from './components/TopBar';
+import { MindMapCanvas } from './features/canvas/MindMapCanvas';
 import { useAppStore } from './stores/app-store';
 
 function ChevronIcon({ flipped }: { flipped: boolean }) {
@@ -96,9 +97,7 @@ function App() {
           </Separator>
 
           <Panel className="flex flex-col overflow-hidden">
-            <div className="flex h-full flex-1 items-center justify-center bg-gray-50">
-              <p className="text-sm text-gray-400">Canvas will go here</p>
-            </div>
+            <MindMapCanvas />
           </Panel>
         </Group>
 
